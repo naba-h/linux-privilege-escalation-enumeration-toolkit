@@ -1,160 +1,107 @@
-Linux Privilege Escalation Enumeration Toolkit
+<h1 align="center">Linux Privilege Escalation Enumeration Toolkit</h1><p align="center">
+A focused Python-based toolkit for identifying privilege escalation vectors in Linux systems.
+</p><p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Status-Active-success?style=flat"/>
+  <img src="https://img.shields.io/badge/License-MIT-2ea44f?style=flat"/>
+  <img src="https://img.shields.io/badge/Maintained-Yes-blue?style=flat"/>
+</p>---
 
-A lightweight Python-based Linux security enumeration toolkit developed to assist penetration testers, security analysts, and cybersecurity students in identifying potential privilege escalation vectors in Linux environments.
+Overview
 
-This toolkit automates the discovery of system information, permission misconfigurations, and security weaknesses that may allow attackers to escalate privileges during the post-exploitation phase of penetration testing.
+Privilege escalation is often the most decisive phase of a security assessment. After initial access is obtained, the ability to elevate privileges determines the overall impact of the engagement.
 
----
+This toolkit automates the enumeration process, systematically identifying misconfigurations, insecure permissions, and system artifacts that may lead to privilege escalation.
 
-Project Overview
-
-Privilege escalation is one of the most critical stages during a penetration testing engagement.
-After gaining initial access to a system, attackers attempt to elevate their privileges in order to obtain administrative or root access.
-
-The Linux Privilege Escalation Enumeration Toolkit automates the enumeration process by scanning Linux systems for potential security weaknesses that may lead to privilege escalation.
-
-The toolkit performs checks for:
-
-- SUID and SGID binaries
-- Writable files and directories
-- Cron job configurations
-- Sudo privileges
-- Linux capabilities
-- System environment variables
-- Kernel version information
-
-These checks help security professionals quickly identify possible privilege escalation opportunities during security assessments.
+It is designed to provide a structured and repeatable workflow for both learners and security practitioners.
 
 ---
 
-Key Features
+Demonstration
 
-The toolkit performs automated enumeration of the following:
+<p align="center">
+  <img src="demo.gif" width="720"/>
+</p>---
 
-- System and user information
-- Kernel version detection
-- SUID binary discovery
-- SGID binary detection
-- World-writable file identification
-- Writable directory discovery
-- Cron job inspection
-- Sudo privilege enumeration
-- Linux capabilities detection
-- Environment variable inspection
+Core Capabilities
 
-These security checks help identify misconfigurations and potential privilege escalation paths within Linux systems.
-
----
-
-Project Structure
-
-PrivEscToolkit
-│
-├── scanner.py
-├── report.txt
-├── README.md
-└── screenshots/
-
-scanner.py
-Main Python script responsible for performing automated enumeration checks.
-
-report.txt
-Generated report containing the results of the security enumeration scan.
-
-README.md
-Project documentation explaining the tool and how to use it.
-
-screenshots/
-Contains screenshots demonstrating the tool execution and output.
-
----
-
-Installation
-
-Clone the repository:
-
-git clone https://github.com/naba-h/linux-privilege-escalation-enumeration-toolkit.git
-
-Navigate to the project directory:
-
-cd linux-privilege-escalation-enumeration-toolkit
-
-Verify Python installation:
-
-python3 --version
+- Identification of SUID and SGID binaries
+- Detection of writable files and directories
+- Analysis of cron job configurations
+- Enumeration of sudo privileges
+- Inspection of Linux capabilities
+- Environment variable analysis
 
 ---
 
 Usage
 
-Run the enumeration toolkit:
-
 python3 scanner.py
 
-Generate a detailed enumeration report:
+---
 
-python3 scanner.py > report.txt
+Installation
 
-The results of the enumeration scan will be saved in the report.txt file.
+git clone https://github.com/naba-h/linux-privilege-escalation-enumeration-toolkit.git
+cd linux-privilege-escalation-enumeration-toolkit
 
 ---
 
-Enumeration Checks Performed
+Sample Output
 
-The toolkit automatically performs the following security checks:
+[+] Collecting system information...
+[+] Checking SUID binaries...
+[!] Potentially vulnerable binary identified
 
-- Current user and system information
-- Kernel version analysis
-- Detection of SUID binaries
-- Detection of SGID binaries
-- Identification of world-writable files
-- Discovery of writable directories
-- Sudo privilege inspection
-- Cron job configuration analysis
-- Linux capability enumeration
-- Environment variable analysis
+[+] Checking writable files...
+[!] Writable path detected
 
-These techniques are widely used during the post-exploitation phase of penetration testing.
+[+] Checking sudo privileges...
+[!] Misconfigured sudo permissions found
 
 ---
 
-Example Use Case
+Architecture
 
-During a penetration test, once an attacker gains initial access to a Linux system, enumeration is required to identify potential privilege escalation opportunities.
-
-This toolkit helps automate that process by gathering system information and identifying possible attack vectors that may lead to privilege escalation.
-
----
-
-Screenshots
-
-Example tool execution:
-
-"Tool Execution" (screenshots/tool_execution.png)
-
-Example generated report:
-
-"Scan Report" (screenshots/report_output.png)
+.
+├── scanner.py
+├── report.txt
+├── demo.gif
+├── screenshots/
+└── README.md
 
 ---
 
-Educational Purpose
+Design Principles
 
-This project was created for educational and cybersecurity learning purposes.
-It demonstrates how automated scripts can assist in identifying security weaknesses and privilege escalation opportunities in Linux environments.
+The toolkit is built with an emphasis on clarity, efficiency, and usability.
+
+Rather than producing excessive output, it focuses on highlighting actionable findings — enabling faster analysis and decision-making during security assessments.
+
+---
+
+Practical Applications
+
+- Penetration testing engagements
+- Cybersecurity labs and training
+- Capture The Flag (CTF) environments
+- Linux security assessments
+
+---
+
+Disclaimer
+
+This project is intended strictly for educational purposes and authorized security testing. Unauthorized use is prohibited.
 
 ---
 
 Author
 
 Naba Hanfi
-Cyber Security Enthusiast
-Security Research Learner
+https://github.com/naba-h
 
 ---
 
-Disclaimer
-
-This project is intended strictly for educational purposes and authorized security testing only.
-
-Do not use this tool on systems without proper permission.
+<p align="center">
+If this project was useful, consider starring the repository.
+</p>
