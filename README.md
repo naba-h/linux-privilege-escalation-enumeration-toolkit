@@ -18,6 +18,7 @@
 <span style="color:#89ddff;">Overview</span>
 
 «⚡ Designed to reduce manual enumeration effort and surface real privilege escalation vectors faster.
+
 🎯 Built with a focus on clarity, signal over noise, and real-world usability.»
 
 Privilege escalation is not just a step — it defines the impact of a security assessment.
