@@ -1,76 +1,90 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=26&duration=2800&pause=800&color=00F7FF&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Security+Focused+Automation;Signal+Over+Noise" />
+  <b>Linux Privilege Escalation Enumeration Toolkit</b>
 </p><p align="center">
-  <b>A structured Python toolkit designed to identify privilege escalation opportunities in Linux environments</b>
-</p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-00f7ff?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Linux-Security-7aa2f7?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Focus-Enumeration-bb9af7?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Status-Active-7bd88f?style=flat-square"/>
-</p>---
-
-<p align="center">
-  <img src="./demo.gif" width="780"/>
+  <sub>
+  A Python-based tool designed to systematically identify privilege escalation opportunities in Linux environments
+  </sub>
 </p>---
 
 <span style="color:#00F7FF;">Overview</span>
 
-Privilege escalation is the stage that defines the true depth of system compromise.
+Privilege escalation is a critical phase in any security assessment.
+After gaining initial access, the ability to elevate privileges determines the true extent of system compromise.
 
-After initial access is obtained, attackers — or security testers — attempt to expand their control by exploiting misconfigurations, weak permissions, or overlooked system artifacts.
+In many cases, escalation paths are not obvious. They exist in the form of:
 
-This toolkit provides a structured, automated, and practical approach to Linux enumeration, enabling users to quickly identify potential escalation paths without relying on scattered manual checks.
+- misconfigured permissions
+- insecure binaries
+- overlooked system artifacts
 
-It is built with one core principle:
+This project addresses that challenge by providing a structured and automated enumeration process.
 
-«Focus on signal — ignore noise.»
+Instead of manually running multiple commands and risking missed vulnerabilities, this tool:
 
----
+- consolidates key checks
+- highlights relevant findings
+- presents results in a clear and actionable format
 
-<span style="color:#00F7FF;">Core Capabilities</span>
-
-The tool performs targeted enumeration across critical areas:
-
-- Detection of SUID / SGID binaries that may allow privilege abuse
-- Identification of world-writable files and directories
-- Extraction of system-level information relevant to escalation
-- Highlighting of potential privilege escalation vectors
-- Generation of clean, readable, and actionable output
+«The core philosophy is simple: focus on meaningful signals, eliminate noise.»
 
 ---
 
-<span style="color:#00F7FF;">Why This Matters</span>
+<span style="color:#00F7FF;">Problem Statement</span>
 
-Manual enumeration is often:
+Manual enumeration in Linux systems is:
 
-- Fragmented across multiple commands
-- Time-intensive and repetitive
-- Highly dependent on user experience
-- Prone to missing subtle vulnerabilities
+- fragmented across many commands
+- dependent on individual experience
+- time-consuming and repetitive
+- prone to human error
 
-In real-world scenarios, these gaps can lead to overlooked escalation paths.
-
-This tool addresses that problem by standardizing and automating the enumeration process, ensuring consistency and reliability.
+As a result, critical escalation paths are often overlooked during assessments.
 
 ---
 
-<span style="color:#00F7FF;">Methodology</span>
+<span style="color:#00F7FF;">Solution Approach</span>
 
-The toolkit follows a clear and repeatable workflow:
+This toolkit automates the enumeration process by systematically scanning the system for known escalation indicators.
+
+It focuses on identifying:
+
+- SUID / SGID binaries that may allow privilege abuse
+- Writable files and directories that can be exploited
+- System-level configurations relevant to escalation
+- Hidden or indirect privilege escalation vectors
+
+By standardizing these checks, the tool ensures consistency, coverage, and reliability.
+
+---
+
+<span style="color:#00F7FF;">How It Works</span>
+
+The tool follows a step-by-step workflow:
 
 1. System Discovery
-   Collect essential system information
+   Collects essential system information such as environment details and configurations
 
 2. Permission Analysis
-   Evaluate file and directory permissions
+   Evaluates file and directory permissions to identify weak access controls
 
 3. Privilege Indicator Detection
-   Identify SUID/SGID binaries and risky configurations
+   Detects SUID/SGID binaries and other high-risk elements
 
 4. Signal Extraction
-   Highlight only the findings that matter
+   Filters results to highlight only actionable findings
 
-This structured approach ensures that results remain focused, relevant, and actionable.
+This layered approach ensures that output remains focused and useful, rather than overwhelming.
+
+---
+
+<span style="color:#00F7FF;">Key Features</span>
+
+- Automated privilege escalation enumeration
+- Detection of insecure permissions
+- Identification of SUID/SGID binaries
+- Clean, structured, and readable output
+- Lightweight and easy to execute
+- Designed for real-world usability
 
 ---
 
@@ -91,17 +105,19 @@ python3 scanner.py
 
 ---
 
-<span style="color:#00F7FF;">Real-World Application</span>
+<span style="color:#00F7FF;">Real-World Scenario</span>
 
-Consider a scenario where a user gains limited shell access on a Linux system.
+Consider a situation where an attacker or penetration tester gains limited shell access to a Linux system.
+
+At this stage, identifying privilege escalation vectors becomes the priority.
 
 Instead of manually executing dozens of enumeration commands, this tool:
 
-- Automates the discovery process
-- Surfaces critical findings instantly
-- Reduces the chance of missing escalation vectors
+- automates the discovery process
+- surfaces critical findings immediately
+- reduces the likelihood of missing vulnerabilities
 
-This significantly improves both efficiency and accuracy during security assessments.
+This results in faster, more accurate, and more reliable assessments.
 
 ---
 
@@ -110,7 +126,7 @@ This significantly improves both efficiency and accuracy during security assessm
 Before
 
 - Manual enumeration
-- High effort
+- High effort and time consumption
 - Inconsistent results
 - Missed vulnerabilities
 
@@ -118,18 +134,18 @@ After
 
 - Automated workflow
 - Faster analysis
-- Consistent output
-- Reliable findings
+- Consistent and structured output
+- Improved detection of escalation paths
 
 ---
 
 <span style="color:#00F7FF;">Project Structure</span>
 
 .
-├── scanner.py
-├── report.txt
-├── demo.gif
-├── screenshots/
+├── scanner.py          # Main enumeration script
+├── report.txt          # Output report
+├── demo.gif            # Demonstration
+├── screenshots/        # Execution visuals
 └── README.md
 
 ---
@@ -138,7 +154,7 @@ After
 
 - Penetration testing engagements
 - Capture The Flag (CTF) challenges
-- Cybersecurity learning and practice
+- Cybersecurity training and learning
 - Linux system security analysis
 
 ---
@@ -158,5 +174,5 @@ Naba Hanfi
 <p align="center">
 ⭐ If you find this project useful, consider giving it a star
 </p><p align="center">
-<sub>security focused • structured approach • subtle neon precision</sub>
+<sub>structured thinking • practical security • meaningful automation</sub>
 </p>
