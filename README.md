@@ -1,110 +1,133 @@
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Focused+Security+Automation;Built+for+Real+World+Assessments" />
-</p><p align="center">
-  <sub style="color:#9aa5b1;">
-  A precision-focused Python toolkit for systematically identifying privilege escalation vectors in Linux environments.
-  </sub>
-</p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-7aa2f7?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Linux-Security-9d7cd8?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Status-Active-7bd88f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-e0af68?style=flat-square"/>
-</p>---
+#!/usr/bin/env python3
+"""
+Linux Privilege Escalation Enumeration Toolkit
+---------------------------------------------
 
-<p align="center">
-  <img src="./demo.gif" width="780"/>
-</p>---
+A clean, Pythonic CLI tool for identifying privilege escalation vectors.
+Designed with simplicity, clarity, and practical usage in mind.
+"""
 
-<span style="color:#7aa2f7;">Overview</span>
+from pathlib import Path
+import os
+import subprocess
+import argparse
+import json
+from datetime import datetime
 
-Privilege escalation defines the true impact layer of a security assessment.
-Once initial access is achieved, the ability to elevate privileges determines how far an attacker—or tester—can go.
+from rich.console import Console
+from rich.table import Table
 
-This toolkit is designed to streamline and standardize the enumeration phase by uncovering:
+console = Console()
 
-- Misconfigured permissions
-- Insecure system artifacts
-- Weak or overlooked configurations
-- Potential escalation vectors
 
-It emphasizes clarity, precision, and real-world applicability, ensuring that findings are actionable rather than noisy.
+# ---------------------- Core Utilities ---------------------- #
 
----
+def run(command: str) -> str:
+    """Execute a shell command and return output."""
+    try:
+        return subprocess.check_output(
+            command, shell=True, text=True, stderr=subprocess.DEVNULL
+        ).strip()
+    except subprocess.CalledProcessError:
+        return ""
 
-<span style="color:#9d7cd8;">Capabilities</span>
 
-- Automated privilege escalation enumeration
-- Detection of insecure file permissions
-- Identification of SUID/SGID binaries
-- Structured and readable output
-- Lightweight execution with minimal overhead
-- Extensible design for advanced customization
+# ---------------------- Enumeration ---------------------- #
 
----
+def get_system_info() -> dict:
+    """Collect basic system information."""
+    return {
+        "user": run("whoami"),
+        "hostname": run("hostname"),
+        "kernel": run("uname -a"),
+    }
 
-<span style="color:#7bd88f;">Design Philosophy</span>
 
-This project is intentionally minimal.
+def find_suid_binaries() -> list[str]:
+    """Find SUID binaries."""
+    output = run("find / -perm -4000 2>/dev/null")
+    return output.splitlines() if output else []
 
-Instead of overwhelming users with excessive data, it focuses on:
 
-- Signal over noise
-- Actionable insights
-- Consistent output structure
-- Faster decision-making during assessments
+def find_writable_paths(root: str = "/") -> list[str]:
+    """Find writable files and directories."""
+    writable = []
+    for path in Path(root).rglob("*"):
+        try:
+            if os.access(path, os.W_OK):
+                writable.append(str(path))
+        except (PermissionError, OSError):
+            continue
+    return writable
 
-The result is a tool that aligns with real-world penetration testing workflows.
 
----
+# ---------------------- Output ---------------------- #
 
-<span style="color:#e0af68;">Usage</span>
+def display_system_info(info: dict):
+    table = Table(title="System Information")
+    table.add_column("Key", style="cyan")
+    table.add_column("Value", style="green")
 
-git clone https://github.com/your-username/linux-privilege-escalation-enumeration-toolkit.git
-cd linux-privilege-escalation-enumeration-toolkit
-python3 scanner.py
+    for k, v in info.items():
+        table.add_row(k, v)
 
----
+    console.print(table)
 
-<span style="color:#9d7cd8;">Output Preview</span>
 
-The tool generates a structured output highlighting potential misconfigurations and escalation paths, allowing quick triage and analysis.
+def display_list(title: str, items: list[str], limit: int = 10):
+    if not items:
+        return
 
----
+    console.print(f"\n[bold cyan][+] {title}[/bold cyan]")
+    for item in items[:limit]:
+        console.print(f"  [green]- {item}[/green]")
 
-<span style="color:#7bd88f;">Project Structure</span>
 
-.
-├── scanner.py
-├── report.txt
-├── demo.gif
-├── screenshots/
-└── README.md
+def save_report(data: dict, filename: str):
+    """Save results to JSON file."""
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+    console.print(f"\n[bold green]Report saved to {filename}[/bold green]")
 
----
 
-<span style="color:#e0af68;">Use Cases</span>
+# ---------------------- Main ---------------------- #
 
-- Penetration Testing Engagements
-- Capture The Flag (CTF) Environments
-- Security Research & Learning
-- Linux Misconfiguration Analysis
+def main():
+    parser = argparse.ArgumentParser(
+        description="Linux Privilege Escalation Enumeration Toolkit"
+    )
+    parser.add_argument(
+        "--json", help="Save output to JSON file", default=None
+    )
+    parser.add_argument(
+        "--limit", help="Limit output results", type=int, default=10
+    )
 
----
+    args = parser.parse_args()
 
-<span style="color:#f7768e;">Disclaimer</span>
+    console.print("[bold cyan][*] Starting enumeration...[/bold cyan]\n")
 
-This tool is intended strictly for educational and authorized security testing purposes.
-Unauthorized usage is prohibited.
+    system = get_system_info()
+    suid = find_suid_binaries()
+    writable = find_writable_paths()
 
----
+    # Display
+    display_system_info(system)
+    display_list("SUID binaries detected", suid, args.limit)
+    display_list("Writable files detected", writable, args.limit)
 
-<span style="color:#7aa2f7;">Author</span>
+    console.print("\n[bold cyan][*] Enumeration complete.[/bold cyan]")
 
-<b style="color:#c0caf5;">Naba Hanfi</b>
-Cybersecurity • Python • Offensive Security
+    # Save JSON if requested
+    if args.json:
+        report = {
+            "timestamp": str(datetime.now()),
+            "system": system,
+            "suid": suid,
+            "writable": writable,
+        }
+        save_report(report, args.json)
 
----
 
-<p align="center">
-  <sub style="color:#565f89;">Built with focus, clarity, and intent.</sub>
-</p>
+if __name__ == "__main__":
+    main()
