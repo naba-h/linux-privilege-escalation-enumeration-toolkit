@@ -51,7 +51,7 @@ The toolkit automates enumeration by systematically identifying:
 - SUID/SGID binaries
 - Weak system configurations
 
-This reduces manual effort while improving accuracy and coverage.
+This improves both efficiency and accuracy.
 
 ---
 
@@ -143,7 +143,7 @@ This project is intended strictly for educational and authorized security testin
 
 <span style="color:#89ddff;">Author</span>
 
-<b style="color:#c0caf5;">Naba Hanfi</b>
+Naba Hanfi
 
 ---
 
