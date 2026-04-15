@@ -1,76 +1,75 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=89ddff&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Where+Security+Meets+Precision;Designed+for+Real+World+Impact" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Clean+Security+Automation;Built+for+Real+World+Usage" />
 </p><p align="center">
   <sub style="color:#9aa5b1;">
-  A structured Python toolkit for identifying privilege escalation opportunities in Linux systems.
+  A modern Python toolkit for identifying privilege escalation opportunities in Linux systems.
   </sub>
 </p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-89ddff?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Linux-Security-c792ea?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Status-Active-a3be8c?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-e5c07b?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Python-3.x-7aa2f7?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Linux-Security-bb9af7?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Status-Active-7bd88f?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-e0af68?style=flat-square"/>
 </p>---
 
 <p align="center">
   <img src="./demo.gif" width="760"/>
 </p>---
 
-<span style="color:#89ddff;">Overview</span>
+<span style="color:#7aa2f7;">Overview</span>
 
 «⚡ Designed to reduce manual enumeration effort and surface real privilege escalation vectors faster.
-
 🎯 Built with a focus on clarity, signal over noise, and real-world usability.»
 
-Privilege escalation is not just a step — it defines the impact of a security assessment.
-Once initial access is obtained, the ability to elevate privileges determines how far control can be extended within a system.
+Privilege escalation defines the true impact layer of a security assessment.
+Once initial access is obtained, identifying escalation paths determines how far control can be extended.
 
-This toolkit introduces a structured and automated approach to Linux enumeration, designed to uncover subtle misconfigurations and hidden system weaknesses.
+This toolkit provides a structured, automated, and practical approach to Linux enumeration, helping uncover misconfigurations and system weaknesses efficiently.
 
 ---
 
-<span style="color:#c792ea;">Key Features</span>
+<span style="color:#bb9af7;">Key Features</span>
 
 - Automated privilege escalation checks
-- Detection of SUID/SGID binaries
+- Detection of SUID / SGID binaries
 - Identification of writable files and directories
 - Structured and readable output
-- Lightweight and easy to run
+- Lightweight and easy to use
 
 ---
 
-<span style="color:#c792ea;">Problem</span>
+<span style="color:#7bd88f;">Problem</span>
 
-Manual enumeration is often:
+Manual enumeration is:
 
 - Time-consuming
 - Inconsistent
-- Prone to missing critical vulnerabilities
+- Easy to miss critical vulnerabilities
 
 ---
 
-<span style="color:#a3be8c;">Solution</span>
+<span style="color:#e0af68;">Solution</span>
 
-The toolkit automates enumeration by systematically identifying:
+This tool automates enumeration by identifying:
 
 - Misconfigured permissions
-- Writable files and directories
+- Writable paths
 - SUID/SGID binaries
 - Weak system configurations
 
-This improves both efficiency and accuracy.
+Result: faster and more reliable analysis
 
 ---
 
-<span style="color:#e5c07b;">Approach</span>
+<span style="color:#7aa2f7;">Approach</span>
 
-1. System discovery
-2. Permission analysis
-3. Privilege indicator detection
-4. Signal extraction
+1. Collect system information
+2. Analyze permissions
+3. Detect privilege indicators
+4. Highlight actionable findings
 
 ---
 
-<span style="color:#89ddff;">Usage</span>
+<span style="color:#bb9af7;">Usage</span>
 
 git clone https://github.com/your-username/linux-privilege-escalation-enumeration-toolkit.git
 cd linux-privilege-escalation-enumeration-toolkit
@@ -78,7 +77,7 @@ python3 scanner.py
 
 ---
 
-<span style="color:#c792ea;">Example Output</span>
+<span style="color:#7bd88f;">Example Output</span>
 
 [+] System information collected
 [+] SUID binaries detected
@@ -87,37 +86,35 @@ python3 scanner.py
 
 ---
 
-<span style="color:#a3be8c;">Real-World Scenario</span>
+<span style="color:#e0af68;">Real-World Scenario</span>
 
-Consider a system where an attacker has limited access.
+With limited system access, manual checks are slow and error-prone.
 
-Instead of manually checking configurations, this tool:
+This tool:
 
 - Automates enumeration
-- Highlights vulnerabilities
-- Surfaces escalation paths
-
-This significantly improves speed and reliability during assessments.
+- Surfaces key findings
+- Reduces the chance of missing vulnerabilities
 
 ---
 
-<span style="color:#e5c07b;">Before vs After</span>
+<span style="color:#7aa2f7;">Before vs After</span>
 
 Before
 
 - Manual checks
 - High effort
-- Missed vulnerabilities
+- Missed signals
 
 After
 
 - Automated workflow
 - Faster analysis
-- Reliable and structured findings
+- Reliable results
 
 ---
 
-<span style="color:#89ddff;">Project Structure</span>
+<span style="color:#bb9af7;">Project Structure</span>
 
 .
 ├── scanner.py
@@ -128,11 +125,11 @@ After
 
 ---
 
-<span style="color:#c792ea;">Use Cases & Applications</span>
+<span style="color:#7bd88f;">Use Cases & Applications</span>
 
 - Penetration testing
 - Capture The Flag (CTF)
-- Security learning
+- Cybersecurity learning
 - Linux system analysis
 
 ---
@@ -143,16 +140,16 @@ This project is intended strictly for educational and authorized security testin
 
 ---
 
-<span style="color:#89ddff;">Author</span>
+<span style="color:#7aa2f7;">Author</span>
 
 Naba Hanfi
 
 ---
 
 <p align="center">
-  ⭐ If you find this project useful, consider giving it a star!
+⭐ If you find this project useful, consider giving it a star!
 </p><p align="center">
   <sub style="color:#565f89;">
-  Built with clarity, structure, and real-world application in mind.
+  clean design — clear thinking — subtle <span style="color:#00f7ff;">neon light</span>
   </sub>
 </p>
