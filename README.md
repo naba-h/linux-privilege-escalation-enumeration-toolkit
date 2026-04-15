@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Focused+Security+Automation;Built+for+Real+World+Assessments" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Structured+Security+Enumeration;Built+for+Real+World+Usage" />
 </p><p align="center">
   <sub style="color:#9aa5b1;">
-  A precision-focused Python toolkit for systematically identifying privilege escalation vectors in Linux environments.
+  A structured Python toolkit for identifying privilege escalation opportunities in Linux systems.
   </sub>
 </p><p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-7aa2f7?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Linux-Security-9d7cd8?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Linux-Security-bb9af7?style=flat-square"/>
   <img src="https://img.shields.io/badge/Status-Active-7bd88f?style=flat-square"/>
   <img src="https://img.shields.io/badge/License-MIT-e0af68?style=flat-square"/>
 </p>---
@@ -17,47 +17,65 @@
 
 <span style="color:#7aa2f7;">Overview</span>
 
-Privilege escalation defines the true impact layer of a security assessment.
-Once initial access is achieved, the ability to elevate privileges determines how far an attacker—or tester—can go.
+Privilege escalation is one of the most critical stages in any security assessment.
+Once initial access is obtained, identifying pathways to elevate privileges determines the true impact of the system compromise.
 
-This toolkit is designed to streamline and standardize the enumeration phase by uncovering:
+This project focuses on automating the enumeration phase, helping uncover misconfigurations and system weaknesses that could lead to privilege escalation.
 
-- Misconfigured permissions
-- Insecure system artifacts
-- Weak or overlooked configurations
-- Potential escalation vectors
-
-It emphasizes clarity, precision, and real-world applicability, ensuring that findings are actionable rather than noisy.
+It provides a consistent, repeatable, and efficient workflow that improves both accuracy and speed during analysis.
 
 ---
 
-<span style="color:#9d7cd8;">Capabilities</span>
+<span style="color:#bb9af7;">Problem Statement</span>
+
+Manual enumeration in Linux environments can be:
+
+- Time-consuming
+- Inconsistent
+- Easy to overlook critical misconfigurations
+
+As a result, important privilege escalation vectors may remain undiscovered.
+
+---
+
+<span style="color:#7bd88f;">Solution Approach</span>
+
+This toolkit automates the process by systematically scanning the system for:
+
+- Misconfigured file permissions
+- SUID/SGID binaries
+- Writable files and directories
+- Weak system configurations
+
+The goal is to reduce manual effort while increasing coverage and reliability.
+
+---
+
+<span style="color:#e0af68;">Key Features</span>
 
 - Automated privilege escalation enumeration
 - Detection of insecure file permissions
 - Identification of SUID/SGID binaries
-- Structured and readable output
-- Lightweight execution with minimal overhead
-- Extensible design for advanced customization
+- Clean, structured, and readable output
+- Lightweight and efficient execution
+- Easily extendable for custom use cases
 
 ---
 
-<span style="color:#7bd88f;">Design Philosophy</span>
+<span style="color:#7aa2f7;">How It Works</span>
 
-This project is intentionally minimal.
+The script performs a sequence of checks across the system, including:
 
-Instead of overwhelming users with excessive data, it focuses on:
+1. Collecting system-level information
+2. Identifying privileged binaries
+3. Scanning writable paths
+4. Detecting misconfigurations
 
-- Signal over noise
-- Actionable insights
-- Consistent output structure
-- Faster decision-making during assessments
-
-The result is a tool that aligns with real-world penetration testing workflows.
+The output highlights potential escalation vectors for further analysis.
 
 ---
 
-<span style="color:#e0af68;">Usage</span>
+<span style="color:#bb9af7;">Usage</span>
 
 git clone https://github.com/your-username/linux-privilege-escalation-enumeration-toolkit.git
 cd linux-privilege-escalation-enumeration-toolkit
@@ -65,13 +83,20 @@ python3 scanner.py
 
 ---
 
-<span style="color:#9d7cd8;">Output Preview</span>
+<span style="color:#7bd88f;">Output</span>
 
-The tool generates a structured output highlighting potential misconfigurations and escalation paths, allowing quick triage and analysis.
+The tool generates structured output that includes:
+
+- System information
+- SUID binaries
+- Writable paths
+- Potential privilege escalation findings
+
+This allows quick identification of vulnerabilities without excessive noise.
 
 ---
 
-<span style="color:#7bd88f;">Project Structure</span>
+<span style="color:#e0af68;">Project Structure</span>
 
 .
 ├── scanner.py
@@ -82,29 +107,28 @@ The tool generates a structured output highlighting potential misconfigurations 
 
 ---
 
-<span style="color:#e0af68;">Use Cases</span>
+<span style="color:#bb9af7;">Use Cases</span>
 
-- Penetration Testing Engagements
-- Capture The Flag (CTF) Environments
-- Security Research & Learning
-- Linux Misconfiguration Analysis
+- Penetration testing engagements
+- Capture The Flag (CTF) challenges
+- Cybersecurity learning and practice
+- Linux misconfiguration analysis
 
 ---
 
 <span style="color:#f7768e;">Disclaimer</span>
 
-This tool is intended strictly for educational and authorized security testing purposes.
-Unauthorized usage is prohibited.
+This project is intended strictly for educational and authorized security testing purposes only.
+Unauthorized use is not permitted.
 
 ---
 
 <span style="color:#7aa2f7;">Author</span>
 
 <b style="color:#c0caf5;">Naba Hanfi</b>
-Cybersecurity • Python • Offensive Security
 
 ---
 
 <p align="center">
-  <sub style="color:#565f89;">Built with focus, clarity, and intent.</sub>
+  <sub style="color:#565f89;">Designed with clarity, structure, and real-world application in mind.</sub>
 </p>
