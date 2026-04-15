@@ -1,75 +1,80 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Clean+Security+Automation;Built+for+Real+World+Usage" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=26&duration=2800&pause=800&color=00F7FF&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Security+Focused+Automation;Signal+Over+Noise" />
 </p><p align="center">
-  <sub style="color:#9aa5b1;">
-  A modern Python toolkit for identifying privilege escalation opportunities in Linux systems.
-  </sub>
+  <b>A structured Python toolkit designed to identify privilege escalation opportunities in Linux environments</b>
 </p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-7aa2f7?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Linux-Security-bb9af7?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Python-3.x-00f7ff?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Linux-Security-7aa2f7?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Focus-Enumeration-bb9af7?style=flat-square"/>
   <img src="https://img.shields.io/badge/Status-Active-7bd88f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-e0af68?style=flat-square"/>
 </p>---
 
 <p align="center">
-  <img src="./demo.gif" width="760"/>
+  <img src="./demo.gif" width="780"/>
 </p>---
 
-<span style="color:#7aa2f7;">Overview</span>
+<span style="color:#00F7FF;">Overview</span>
 
-«⚡ Designed to reduce manual enumeration effort and surface real privilege escalation vectors faster.
-🎯 Built with a focus on clarity, signal over noise, and real-world usability.»
+Privilege escalation is the stage that defines the true depth of system compromise.
 
-Privilege escalation defines the true impact layer of a security assessment.
-Once initial access is obtained, identifying escalation paths determines how far control can be extended.
+After initial access is obtained, attackers — or security testers — attempt to expand their control by exploiting misconfigurations, weak permissions, or overlooked system artifacts.
 
-This toolkit provides a structured, automated, and practical approach to Linux enumeration, helping uncover misconfigurations and system weaknesses efficiently.
+This toolkit provides a structured, automated, and practical approach to Linux enumeration, enabling users to quickly identify potential escalation paths without relying on scattered manual checks.
 
----
+It is built with one core principle:
 
-<span style="color:#bb9af7;">Key Features</span>
-
-- Automated privilege escalation checks
-- Detection of SUID / SGID binaries
-- Identification of writable files and directories
-- Structured and readable output
-- Lightweight and easy to use
+«Focus on signal — ignore noise.»
 
 ---
 
-<span style="color:#7bd88f;">Problem</span>
+<span style="color:#00F7FF;">Core Capabilities</span>
 
-Manual enumeration is:
+The tool performs targeted enumeration across critical areas:
 
-- Time-consuming
-- Inconsistent
-- Easy to miss critical vulnerabilities
-
----
-
-<span style="color:#e0af68;">Solution</span>
-
-This tool automates enumeration by identifying:
-
-- Misconfigured permissions
-- Writable paths
-- SUID/SGID binaries
-- Weak system configurations
-
-Result: faster and more reliable analysis
+- Detection of SUID / SGID binaries that may allow privilege abuse
+- Identification of world-writable files and directories
+- Extraction of system-level information relevant to escalation
+- Highlighting of potential privilege escalation vectors
+- Generation of clean, readable, and actionable output
 
 ---
 
-<span style="color:#7aa2f7;">Approach</span>
+<span style="color:#00F7FF;">Why This Matters</span>
 
-1. Collect system information
-2. Analyze permissions
-3. Detect privilege indicators
-4. Highlight actionable findings
+Manual enumeration is often:
+
+- Fragmented across multiple commands
+- Time-intensive and repetitive
+- Highly dependent on user experience
+- Prone to missing subtle vulnerabilities
+
+In real-world scenarios, these gaps can lead to overlooked escalation paths.
+
+This tool addresses that problem by standardizing and automating the enumeration process, ensuring consistency and reliability.
 
 ---
 
-<span style="color:#bb9af7;">Usage</span>
+<span style="color:#00F7FF;">Methodology</span>
+
+The toolkit follows a clear and repeatable workflow:
+
+1. System Discovery
+   Collect essential system information
+
+2. Permission Analysis
+   Evaluate file and directory permissions
+
+3. Privilege Indicator Detection
+   Identify SUID/SGID binaries and risky configurations
+
+4. Signal Extraction
+   Highlight only the findings that matter
+
+This structured approach ensures that results remain focused, relevant, and actionable.
+
+---
+
+<span style="color:#00F7FF;">Usage</span>
 
 git clone https://github.com/your-username/linux-privilege-escalation-enumeration-toolkit.git
 cd linux-privilege-escalation-enumeration-toolkit
@@ -77,7 +82,7 @@ python3 scanner.py
 
 ---
 
-<span style="color:#7bd88f;">Example Output</span>
+<span style="color:#00F7FF;">Example Output</span>
 
 [+] System information collected
 [+] SUID binaries detected
@@ -86,35 +91,39 @@ python3 scanner.py
 
 ---
 
-<span style="color:#e0af68;">Real-World Scenario</span>
+<span style="color:#00F7FF;">Real-World Application</span>
 
-With limited system access, manual checks are slow and error-prone.
+Consider a scenario where a user gains limited shell access on a Linux system.
 
-This tool:
+Instead of manually executing dozens of enumeration commands, this tool:
 
-- Automates enumeration
-- Surfaces key findings
-- Reduces the chance of missing vulnerabilities
+- Automates the discovery process
+- Surfaces critical findings instantly
+- Reduces the chance of missing escalation vectors
+
+This significantly improves both efficiency and accuracy during security assessments.
 
 ---
 
-<span style="color:#7aa2f7;">Before vs After</span>
+<span style="color:#00F7FF;">Before vs After</span>
 
 Before
 
-- Manual checks
+- Manual enumeration
 - High effort
-- Missed signals
+- Inconsistent results
+- Missed vulnerabilities
 
 After
 
 - Automated workflow
 - Faster analysis
-- Reliable results
+- Consistent output
+- Reliable findings
 
 ---
 
-<span style="color:#bb9af7;">Project Structure</span>
+<span style="color:#00F7FF;">Project Structure</span>
 
 .
 ├── scanner.py
@@ -125,31 +134,29 @@ After
 
 ---
 
-<span style="color:#7bd88f;">Use Cases & Applications</span>
+<span style="color:#00F7FF;">Use Cases</span>
 
-- Penetration testing
-- Capture The Flag (CTF)
-- Cybersecurity learning
-- Linux system analysis
+- Penetration testing engagements
+- Capture The Flag (CTF) challenges
+- Cybersecurity learning and practice
+- Linux system security analysis
 
 ---
 
-<span style="color:#f7768e;">Disclaimer</span>
+<span style="color:#00F7FF;">Disclaimer</span>
 
 This project is intended strictly for educational and authorized security testing purposes only.
 
 ---
 
-<span style="color:#7aa2f7;">Author</span>
+<span style="color:#00F7FF;">Author</span>
 
 Naba Hanfi
 
 ---
 
 <p align="center">
-⭐ If you find this project useful, consider giving it a star!
+⭐ If you find this project useful, consider giving it a star
 </p><p align="center">
-  <sub style="color:#565f89;">
-  clean design — clear thinking — subtle <span style="color:#00f7ff;">neon light</span>
-  </sub>
+<sub>security focused • structured approach • subtle neon precision</sub>
 </p>
