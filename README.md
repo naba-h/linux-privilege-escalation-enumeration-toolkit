@@ -3,11 +3,11 @@
 </p><p align="center">
   <b>A Python-based toolkit for systematically identifying privilege escalation opportunities in Linux environments</b>
 </p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-00f7ff?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Linux-Security-0a0f2c?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Focus-Enumeration-00ffcc?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Status-Active-00ff88?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/License-MIT-ffaa00?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Python-3.x-7AA2F7?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Linux-Security-BB9AF7?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Focus-Enumeration-7BD88F?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Active-9ECE6A?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/License-MIT-E0AF68?style=for-the-badge"/>
 </p>---
 
 <p align="center">
@@ -168,5 +168,5 @@ Naba Hanfi
 <p align="center">
 ⭐ If you find this project useful, consider giving it a star
 </p><p align="center">
-<sub>security focused • structured workflow • professional execution</sub>
+<sub>security focused • structured workflow • professional execution • subtle neon precision</sub>
 </p>
