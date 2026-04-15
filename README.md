@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Structured+Security+Enumeration;Built+for+Real+World+Usage" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=900&lines=Linux+Privilege+Escalation+Enumeration+Toolkit;Clean+and+Structured+Security+Automation;Built+for+Practical+Use" />
 </p><p align="center">
   <sub style="color:#9aa5b1;">
-  A structured Python toolkit for identifying privilege escalation opportunities in Linux systems.
+  A minimal, structured Python toolkit for identifying privilege escalation opportunities in Linux environments.
   </sub>
 </p><p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-7aa2f7?style=flat-square"/>
@@ -12,70 +12,45 @@
 </p>---
 
 <p align="center">
-  <img src="./demo.gif" width="780"/>
+  <img src="./demo.gif" width="760"/>
 </p>---
 
 <span style="color:#7aa2f7;">Overview</span>
 
-Privilege escalation is one of the most critical stages in any security assessment.
-Once initial access is obtained, identifying pathways to elevate privileges determines the true impact of the system compromise.
+Privilege escalation is a defining phase in system security analysis.
+After initial access, identifying reliable escalation paths determines the effectiveness of the assessment.
 
-This project focuses on automating the enumeration phase, helping uncover misconfigurations and system weaknesses that could lead to privilege escalation.
+This project provides a clear and structured approach to Linux enumeration, focusing on uncovering misconfigurations and system weaknesses that may lead to privilege escalation.
 
-It provides a consistent, repeatable, and efficient workflow that improves both accuracy and speed during analysis.
-
----
-
-<span style="color:#bb9af7;">Problem Statement</span>
-
-Manual enumeration in Linux environments can be:
-
-- Time-consuming
-- Inconsistent
-- Easy to overlook critical misconfigurations
-
-As a result, important privilege escalation vectors may remain undiscovered.
+The emphasis is on readability, consistency, and practical usefulness.
 
 ---
 
-<span style="color:#7bd88f;">Solution Approach</span>
+<span style="color:#bb9af7;">What This Tool Does</span>
 
-This toolkit automates the process by systematically scanning the system for:
+The toolkit automates common enumeration tasks, including:
 
-- Misconfigured file permissions
-- SUID/SGID binaries
-- Writable files and directories
-- Weak system configurations
+- Identifying SUID and SGID binaries
+- Detecting writable files and directories
+- Highlighting insecure permissions
+- Surfacing potential escalation vectors
 
-The goal is to reduce manual effort while increasing coverage and reliability.
-
----
-
-<span style="color:#e0af68;">Key Features</span>
-
-- Automated privilege escalation enumeration
-- Detection of insecure file permissions
-- Identification of SUID/SGID binaries
-- Clean, structured, and readable output
-- Lightweight and efficient execution
-- Easily extendable for custom use cases
+Each check is designed to produce concise and actionable output.
 
 ---
 
-<span style="color:#7aa2f7;">How It Works</span>
+<span style="color:#7bd88f;">Design Principles</span>
 
-The script performs a sequence of checks across the system, including:
+- Keep output minimal and readable
+- Focus on actionable findings
+- Avoid unnecessary noise
+- Maintain a predictable structure
 
-1. Collecting system-level information
-2. Identifying privileged binaries
-3. Scanning writable paths
-4. Detecting misconfigurations
-
-The output highlights potential escalation vectors for further analysis.
+The goal is to make results easy to interpret and useful in real workflows.
 
 ---
 
-<span style="color:#bb9af7;">Usage</span>
+<span style="color:#e0af68;">Usage</span>
 
 git clone https://github.com/your-username/linux-privilege-escalation-enumeration-toolkit.git
 cd linux-privilege-escalation-enumeration-toolkit
@@ -83,20 +58,16 @@ python3 scanner.py
 
 ---
 
-<span style="color:#7bd88f;">Output</span>
+<span style="color:#7aa2f7;">Example Output</span>
 
-The tool generates structured output that includes:
-
-- System information
-- SUID binaries
-- Writable paths
-- Potential privilege escalation findings
-
-This allows quick identification of vulnerabilities without excessive noise.
+[+] System Information
+[+] SUID binaries identified
+[!] Writable file detected
+[!] Potential privilege escalation path found
 
 ---
 
-<span style="color:#e0af68;">Project Structure</span>
+<span style="color:#bb9af7;">Project Structure</span>
 
 .
 ├── scanner.py
@@ -107,19 +78,18 @@ This allows quick identification of vulnerabilities without excessive noise.
 
 ---
 
-<span style="color:#bb9af7;">Use Cases</span>
+<span style="color:#7bd88f;">Use Cases</span>
 
-- Penetration testing engagements
-- Capture The Flag (CTF) challenges
-- Cybersecurity learning and practice
-- Linux misconfiguration analysis
+- Security assessments
+- Capture The Flag (CTF) environments
+- Cybersecurity learning
+- Linux system analysis
 
 ---
 
 <span style="color:#f7768e;">Disclaimer</span>
 
-This project is intended strictly for educational and authorized security testing purposes only.
-Unauthorized use is not permitted.
+This project is intended for educational and authorized security testing only.
 
 ---
 
@@ -130,5 +100,5 @@ Unauthorized use is not permitted.
 ---
 
 <p align="center">
-  <sub style="color:#565f89;">Designed with clarity, structure, and real-world application in mind.</sub>
+  <sub style="color:#565f89;">Simple, structured, and built for real use.</sub>
 </p>
