@@ -17,16 +17,23 @@
 
 <span style="color:#89ddff;">Overview</span>
 
+«⚡ Designed to reduce manual enumeration effort and surface real privilege escalation vectors faster.
+🎯 Built with a focus on clarity, signal over noise, and real-world usability.»
+
 Privilege escalation is not just a step — it defines the impact of a security assessment.
 Once initial access is obtained, the ability to elevate privileges determines how far control can be extended within a system.
 
 This toolkit introduces a structured and automated approach to Linux enumeration, designed to uncover subtle misconfigurations and hidden system weaknesses.
 
-It focuses on:
+---
 
-- Meaningful signals
-- Relevant system artifacts
-- Actionable findings
+<span style="color:#c792ea;">Key Features</span>
+
+- Automated privilege escalation checks
+- Detection of SUID/SGID binaries
+- Identification of writable files and directories
+- Structured and readable output
+- Lightweight and easy to run
 
 ---
 
@@ -37,8 +44,6 @@ Manual enumeration is often:
 - Time-consuming
 - Inconsistent
 - Prone to missing critical vulnerabilities
-
-This creates gaps in identifying real privilege escalation opportunities.
 
 ---
 
@@ -57,14 +62,10 @@ This improves both efficiency and accuracy.
 
 <span style="color:#e5c07b;">Approach</span>
 
-The tool follows a structured workflow:
-
 1. System discovery
 2. Permission analysis
 3. Privilege indicator detection
 4. Signal extraction
-
-This ensures a clear and focused output optimized for real-world usage.
 
 ---
 
@@ -126,7 +127,7 @@ After
 
 ---
 
-<span style="color:#c792ea;">Use Cases</span>
+<span style="color:#c792ea;">Use Cases & Applications</span>
 
 - Penetration testing
 - Capture The Flag (CTF)
@@ -148,6 +149,8 @@ Naba Hanfi
 ---
 
 <p align="center">
+  ⭐ If you find this project useful, consider giving it a star!
+</p><p align="center">
   <sub style="color:#565f89;">
   Built with clarity, structure, and real-world application in mind.
   </sub>
