@@ -1,20 +1,50 @@
-<h1 align="center">Linux Privilege Escalation Enumeration Toolkit</h1><p align="center">
+<h1 align="center">Linux Privilege Escalation Enumeration Toolkit</h1>
+
+<p align="center">
 A focused Python-based toolkit for identifying privilege escalation vectors in Linux systems.
-</p><p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Status-Active-success?style=flat"/>
-  <img src="https://img.shields.io/badge/License-MIT-2ea44f?style=flat"/>
-  <img src="https://img.shields.io/badge/Maintained-Yes-blue?style=flat"/>
-</p>---
+</p>
 
-Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Maintained-Yes-blue?style=flat-square"/>
+</p>
 
-Privilege escalation is often the most decisive phase of a security assessment. After initial access is obtained, the ability to elevate privileges determines the overall impact of the engagement.
+---
 
-This toolkit automates the enumeration process, systematically identifying misconfigurations, insecure permissions, and system artifacts that may lead to privilege escalation.
+## 🔍 Overview
 
-It is designed to provide a structured and repeatable workflow for both learners and security practitioners.
+Privilege escalation is often the most critical phase in a security assessment.  
+After gaining initial access, the ability to escalate privileges determines the overall impact of the engagement.
 
+This toolkit automates the enumeration process by identifying:
+- Misconfigured permissions  
+- Insecure system files  
+- Weak configurations  
+- Potential privilege escalation vectors  
+
+It is designed to provide a **structured, repeatable, and efficient workflow** for both learners and security professionals.
+
+---
+
+## ⚙️ Features
+
+- 🔎 Automated privilege escalation checks  
+- 📁 Detection of misconfigured files & directories  
+- ⚠️ Identification of SUID/SGID binaries  
+- 🧠 Simple and readable output  
+- ⚡ Lightweight and fast execution  
+- 🛠 Beginner-friendly and easy to modify  
+
+---
+
+## 🚀 Usage
+
+```bash
+git clone https://github.com/your-username/linux-privilege-escalation-enumeration-toolkit.git
+cd linux-privilege-escalation-enumeration-toolkit
+python3 scanner.py
 ---
 
 Demonstration
